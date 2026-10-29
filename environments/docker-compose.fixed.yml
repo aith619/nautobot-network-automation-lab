@@ -1,0 +1,10 @@
+services:
+  nautobot:
+    image: nautobot-fixed:local
+    build: !reset null
+
+  celery_worker:
+    image: nautobot-fixed:local
+
+  celery_beat:
+    image: nautobot-fixed:local

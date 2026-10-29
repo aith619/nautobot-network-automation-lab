@@ -1,0 +1,10 @@
+FROM docker.io/yourrepo/nautobot-docker-compose:local
+
+USER root
+
+RUN python -m pip uninstall -y charset-normalizer && \
+    python -m pip install --no-cache-dir \
+      --no-binary=charset-normalizer \
+      charset-normalizer==3.4.4
+
+USER nautobot
